@@ -1,0 +1,30 @@
+/*jQuery é uma biblioteca JavaScript rápida, pequena e rica em recursos. Ela torna coisas como travessia e 
+manipulação de documentos HTML, manipulação de eventos, animação e Ajax muito mais simples com uma API fácil de
+ usar que funciona em uma infinidade de navegadores. Com uma combinação de versatilidade e extensibilidade, 
+ o jQuery mudou a maneira como milhões de pessoas escrevem JavaScript.
+ */
+
+ <!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").hide();
+  })
+});
+</script>
+</head>
+<body>
+
+<h2>This is a heading</h2>
+
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<button>Click me to hide paragraphs</button>
+
+</body>
+</html>
+

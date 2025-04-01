@@ -1,0 +1,51 @@
+//React é um framework JavaScript criado pelo Facebook (atual Meta) que é usado para criar interfaces de usuário
+// (UI) em aplicativos web. Ele é popular por ser fácil de usar, altamente flexível e escalável, e é usado por 
+ //muitas empresas de tecnologia, incluindo o Facebook, Instagram e Airbnb
+
+ <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo de React.js</title>
+  <!-- CDN do React -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <!-- CDN do Babel para transpilar JSX -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <h1>Exemplo de React.js no HTML</h1>
+
+  <!-- Elemento onde o React vai renderizar o componente -->
+  <div id="root"></div>
+
+  <!-- Código React em JSX -->
+  <script type="text/babel">
+    // Definindo um componente funcional simples
+    const App = () => {
+      const [contador, setContador] = React.useState(0);
+
+      const aumentarContador = () => {
+        setContador(contador + 1);
+      };
+
+      const diminuirContador = () => {
+        setContador(contador - 1);
+      };
+
+      return (
+        <div>
+          <h2>Contador: {contador}</h2>
+          <button onClick={aumentarContador}>Aumentar</button>
+          <button onClick={diminuirContador}>Diminuir</button>
+        </div>
+      );
+    };
+
+    // Renderizando o componente App no elemento com id="root"
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+
+</body>
+</html>

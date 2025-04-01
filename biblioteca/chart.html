@@ -1,0 +1,42 @@
+//O Chart Trading, ou operação pelo gráfico, é um modo de negociação que permite inserir suas ordens diretamente 
+//no gráfico. Isso elimina a necessidade de “boletar” os valores por meio da corretora sem observar a oscilação 
+//do mercado, agilizando e otimizando tanto a operação quanto o envio de ordens.
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Gráfico</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h2>Exemplo de Gráfico de Barras</h2>
+    <canvas id="myChart" width="400" height="200"></canvas>
+
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar', // Tipo de gráfico (bar, line, pie, etc.)
+            data: {
+                labels: ['A', 'B', 'C', 'D', 'E'], // Labels das barras
+                datasets: [{
+                    label: 'Valores', // Legenda do gráfico
+                    data: [23, 45, 56, 78, 33], // Valores das barras
+                    backgroundColor: 'rgba(135, 206, 250, 0.6)', // Cor das barras
+                    borderColor: 'rgba(0, 123, 255, 1)', // Cor da borda das barras
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
