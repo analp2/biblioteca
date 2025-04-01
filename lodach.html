@@ -1,0 +1,36 @@
+//Lodash é uma biblioteca Javascript que fornece um conjunto de funções para que a pessoa programadora possa
+ //trabalhar com mais facilidade em tarefas que envolvam a manipulação de matrizes, strings, objetos, números,
+ // etc.
+ <!DOCTYPE html>
+ <html lang="pt-br">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Exemplo de Lodash</title>
+   <!-- Importando a biblioteca Lodash -->
+   <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+ </head>
+ <body>
+   <h1>Exemplo de Uso do Lodash</h1>
+ 
+   <button onclick="mostrarResultados()">Mostrar Resultados</button>
+ 
+   <div id="resultados"></div>
+ 
+   <script>
+     // Exemplo de manipulação de arrays com Lodash
+     function mostrarResultados() {
+       const numeros = [10, 20, 30, 40, 50, 60];
+       const numerosFiltrados = _.filter(numeros, num => num >= 30); // Filtra números maiores ou iguais a 30
+       const numerosMapeados = _.map(numerosFiltrados, num => num * 2); // Multiplica por 2 os números filtrados
+ 
+       const resultadosDiv = document.getElementById('resultados');
+       resultadosDiv.innerHTML = `
+         <p>Numeros Filtrados: ${numerosFiltrados.join(', ')}</p>
+         <p>Numeros Mapeados: ${numerosMapeados.join(', ')}</p>
+       `;
+     }
+   </script>
+ </body>
+ </html>
+ 
